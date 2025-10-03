@@ -1,0 +1,713 @@
+/* Styles for screen sizes 1166px and below */
+@media (max-width: 1166px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  /* Make banner wrapper items wrap */
+  #banner .banner_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Full width for left and right banner sections */
+  #banner .banner_wrapper .left {
+    width: 100%;
+    text-align: center;
+  }
+
+  #banner .banner_wrapper .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Properties wrapper stacks vertically */
+  main #properti .properti_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Property items take full width max 500px */
+  main #properti .properti_wrapper .item {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Residen wrapper grid one column */
+  .residen_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Residen kota wrapper static position, full width */
+  .residen_kota_wrapper {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Residen kota cards full width and static position */
+  .residen_kota_card {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Contact section vertical stack */
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Footer styles for small screens */
+  footer {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  /* Footer right icons smaller margin and font */
+  footer .footer-right i {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Reset all margins and paddings, set box-sizing and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* No bullet points for list items */
+li {
+  list-style-type: none;
+}
+
+/* Container center with fixed width */
+.container {
+  width: 1166px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header background color */
+header {
+  background-color: #eeedde;
+}
+
+/* Navigation container */
+header nav {
+  padding-top: 42px;
+  display: flex;
+}
+
+/* Navigation wrapper with space between items */
+header nav .nav_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation list displayed horizontally with gaps */
+header nav .nav_wrapper ul {
+  display: flex;
+  gap: 100px;
+}
+
+/* Navigation list items styling */
+header nav .nav_wrapper ul li {
+  font-size: 16px;
+  font-weight: 300;
+  color: #203239;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* On hover, change font weight to bold */
+header nav .nav_wrapper ul li:hover {
+  font-weight: 600;
+}
+
+/* Small underline on hover */
+header nav .nav_wrapper ul li::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  background-color: #ff6105;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+/* Show underline on hover */
+header nav .nav_wrapper ul li:hover::after {
+  width: 20px;
+}
+
+/* Banner padding */
+#banner {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+/* Banner flex container space between */
+#banner .banner_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Banner left heading */
+#banner .banner_wrapper .left h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #203239;
+  width: 777px;
+}
+
+/* Banner left paragraph */
+#banner .banner_wrapper .left p {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(32, 50, 57, 0.55);
+  width: 544px;
+  line-height: 30px;
+  margin-top: 24px;
+}
+
+/* Input box container with relative position */
+#banner .banner_wrapper .left .input_box {
+  position: relative;
+  margin-top: 55px;
+}
+
+/* Input field styles */
+#banner .banner_wrapper .left .input_box input {
+  width: 508px;
+  height: 70px;
+  border-radius: 15px;
+  border: none;
+  padding-left: 56px;
+}
+
+/* Icon inside input box */
+#banner .banner_wrapper .left .input_box .map_icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+/* Button inside input box */
+#banner .banner_wrapper .left .input_box button {
+  padding: 25px 50px;
+  border-radius: 15px;
+  border: none;
+  background-color: #f6762e;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover color */
+#banner .banner_wrapper .left .input_box button:hover {
+  background-color: #e06626;
+}
+
+/* Properties section bottom margin */
+main #properti {
+  margin-bottom: 100px;
+  background-color: #ffffff;
+}
+
+/* Properties heading */
+main #properti h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #203239;
+  width: 533px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: left;
+}
+
+/* Properties wrapper flex with space between */
+main #properti .properti_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 62px;
+}
+
+/* Properties item */
+main #properti .properti_wrapper .item {
+  width: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 33px;
+  padding-right: 33px;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Properties item title */
+main #properti .properti_wrapper .item h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #203239;
+}
+
+/* Properties item paragraph */
+main #properti .properti_wrapper .item p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #203239;
+  line-height: 30px;
+  width: 232px;
+  margin-top: 8px;
+}
+
+/* Properties item button */
+main #properti .properti_wrapper .item button {
+  margin-top: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Orange side bar on property item */
+main #properti .properti_wrapper .item::after {
+  content: '';
+  width: 8px;
+  height: 30px;
+  background: #ff7527;
+  position: absolute;
+  top: 17px;
+  left: 0;
+  border-radius: 5px;
+}
+
+/* Shadow on hover for property */
+main #properti .properti_wrapper .item:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+}
+
+/* Residen section background and padding */
+#residen {
+  background-color: #f3f0e3;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Residen grid layout */
+.residen_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Residen left label */
+.residen_left .label {
+  color: #f6762e;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Residen left heading */
+.residen_left h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #203239;
+  margin-bottom: 40px;
+}
+
+/* Residen left images container */
+.residen_left .images {
+  position: relative;
+  width: 500px;
+}
+
+/* First image style */
+.residen_left .images img:first-child {
+  width: 300px;
+  height: 360px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 60px;
+  left: 150px;
+  z-index: 2;
+}
+
+/* Second image style */
+.residen_left .images img:last-child {
+  width: 300px;
+  height: 360px;
+  border-radius: 8px;
+  position: relative;
+  top: 15px;
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Image hover effect */
+.residen_left .images img {
+  transition: all 0.3s ease;
+}
+
+.residen_left .images img:hover {
+  padding: 8px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Residen right heading */
+.residen_right h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #203239;
+  margin-bottom: 16px;
+}
+
+/* Residen right paragraph */
+.residen_right p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555555;
+  margin-bottom: 28px;
+  max-width: 500px;
+}
+
+/* Residen right buttons container */
+.residen_right .buttons {
+  display: flex;
+  gap: 16px;
+}
+
+/* Button outline style */
+.btn-outline {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid #203239;
+  background-color: transparent;
+  color: #203239;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Outline button hover background */
+.btn-outline:hover {
+  background-color: rgba(32, 50, 57, 0.05);
+}
+
+/* Primary button style */
+.btn-primary {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  background-color: #1f2937;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Primary button hover styles */
+.btn-primary:hover {
+  background-color: #111827;
+  transform: translateY(-2px);
+}
+
+/* Residen kota section */
+#residen-kota {
+  position: relative;
+  width: 1166px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Residen kota label */
+#residen-kota .label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff7527;
+  margin-top: 68px;
+  margin-left: 0;
+}
+
+/* Residen kota heading */
+#residen-kota h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #203239;
+  margin-top: 8px;
+  margin-left: 0;
+}
+
+/* Residen kota wrapper */
+.residen_kota_wrapper {
+  position: relative;
+  width: 1166px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Each residen kota card */
+.residen_kota_card {
+  position: absolute;
+  width: 373px;
+  height: 454px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+/* Card images */
+.residen_kota_card img {
+  width: 373px;
+  height: 454px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Card title */
+.residen_kota_card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #203239;
+}
+
+/* Card paragraph */
+.residen_kota_card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* Card hover effect */
+.residen_kota_card:hover {
+  padding: 1%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Positions for cards */
+.residen_kota_card:nth-child(1) {
+  top: 64px;
+  left: 0;
+}
+
+.residen_kota_card:nth-child(2) {
+  top: 64px;
+  left: 397px;
+}
+
+.residen_kota_card:nth-child(3) {
+  top: 64px;
+  left: 793px;
+}
+
+/* Body basic styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #203239;
+}
+
+/* Container wrapper style */
+.container {
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+}
+
+/* Content flex container */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Contact and award sections stacked */
+.contact-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.award-area {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section headings */
+.contact-area h2 {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.award-area h2 {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Group cards container */
+.card-group {
+  display: flex;
+  gap: 20px;
+}
+
+/* Individual card */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  width: 273px;
+  height: 167px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  color: #203239;
+}
+
+/* Phone icon */
+.phone-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* Text styles */
+.call-text {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.phone-number {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Call button */
+.btn-call {
+  background-color: #203239;
+  border: none;
+  left: 83;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+/* Button hover */
+.btn-call:hover {
+  background-color: #1b2a2a;
+}
+
+/* Award images */
+.award-area img {
+  width: 156px;
+  height: 104px;
+  object-fit: contain;
+  margin-top: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #203239;
+  width: 1166px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 50px;
+  color: #EEEDDE;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+/* Footer left italic text */
+footer .footer-left em {
+  font-style: italic;
+  margin-right: 5px;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+/* Footer left text */
+footer .footer-left {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+/* Footer right icons */
+footer .footer-right i {
+  margin-left: 18px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Footer icon hover effect */
+footer .footer-right i:hover {
+  color: #aaf;
+}
